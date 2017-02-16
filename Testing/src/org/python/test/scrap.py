@@ -126,4 +126,79 @@ class tester:
 temp = tester(12)
 print temp.id
 
-help(round)
+#help(round)
+
+m = [[x, y] for x in range(0, 4) for y in range(0, 4)]
+
+print (len(m))
+
+
+#It will print the sorted list. 
+values = [[3, 4, 5, 1 ], [33, 6, 1, 2]]
+
+for row in values:
+
+    row.sort()
+
+    for element in row:
+
+        print(element)
+
+    print(" ")
+    
+#Another good example to understand lists of lists    
+data = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+
+def ttt(m):
+
+    v = m[0][0]
+    for row in m:
+
+        for element in row:
+
+            if v < element: 
+                v = element     
+
+    return v
+
+
+print(ttt(data[1]))
+
+#Understanding the loop. It will print 012
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+    if i == 3:
+        break
+else:
+    print(0)
+
+#2nd example .it will print 0120. Else is executed when the loop is false.    
+i = 0
+while i < 3:
+    print(i)
+    i += 1
+else:
+    print(0)    
+    
+#Printing chracter. 
+x = "abcdef"
+i = "a"
+while i in x:
+    x = x[1:]
+    print(i )
+    
+#Function defination 
+x = 50
+
+def func():
+
+    global x
+    print('x is', x)
+    x = 2
+    print('Changed global x to', x)
+
+func()
+
+print('Value of x is', x)
