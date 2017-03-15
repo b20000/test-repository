@@ -3,6 +3,8 @@
 # Import built-in module math
 import math
 import ast
+import copy
+import bisect
 
 Money = 2000
 def AddMoney():
@@ -202,3 +204,22 @@ def func():
 func()
 
 print('Value of x is', x)
+
+stringValue = 'Hello World'
+
+print ''.join(reversed(stringValue))
+print stringValue[ : : -1]
+
+#Using the concept of bisect to insert sorted element in list
+l1 = [1,9,5,11,2]
+l1.sort()
+print l1
+bisect.insort(l1, 7)
+print l1
+
+
+#Using copy to copy lists
+l2 = [3,10,4,8]
+
+l2 = copy.copy(l1)
+print l2
