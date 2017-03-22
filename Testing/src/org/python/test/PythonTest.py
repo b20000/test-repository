@@ -18,6 +18,52 @@ class PythonTest(object):
             return n
         else:
             return self.factorial(n-1)* n
+     
+    def factorialSimple(self,n):
+        
+        num =1 
+        
+        while n  >= 1:
+            
+            num = num * n
+            n = n-1 
+        
+        return num
+    
+    def checkPallindrom(self,str):
+        
+        str1 = str [::-1]
+
+        if str == str1:
+            return True
+        else:
+            return False
+    
+    def checkifPallindrom(self,str):
+        
+        letters = list(str)
+        
+        pallindrom = True
+        index = 0
+        last = len(letters)
+        
+        while len(letters) > 0 and pallindrom == True:
+            
+            if letters[index] != letters[last-1] :
+                
+                pallindrom = False
+            
+            else:
+                letters.pop(0)
+                if len(letters) > 0:
+                    
+                    letters.pop(last-1)
+        
+            
+            #index = index +1 
+            
+        return pallindrom
+        
         
     def addTwo (self, n, m):
         
@@ -125,4 +171,6 @@ if __name__ == "__main__":
     
     print obj.coinMatchDynamic(target, coins, known_results)
     
+    print obj.factorialSimple(5)
     
+    print obj.checkifPallindrom('mallayallam')

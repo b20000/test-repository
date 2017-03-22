@@ -5,6 +5,8 @@ import math
 import ast
 import copy
 import bisect
+from collections import OrderedDict
+
 
 Money = 2000
 def AddMoney():
@@ -223,3 +225,17 @@ l2 = [3,10,4,8]
 
 l2 = copy.copy(l1)
 print l2
+
+str = "mmmpprtrr"
+
+print ''.join(OrderedDict.fromkeys(str))
+
+seen = set()
+result = []
+for c in str:
+    if c not in seen:
+        result.append(c)
+        seen.add(c)
+result = ''.join(result)
+
+print result

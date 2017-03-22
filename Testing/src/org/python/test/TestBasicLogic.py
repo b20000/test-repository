@@ -128,4 +128,4 @@ if __name__ == '__main__':
     
     #objBasicLogic.countChracterInAString(StringA)
     
-    objBasicLogic.compression('A')
+    objBasicLogic.compression('ABBCCCDDDD')
